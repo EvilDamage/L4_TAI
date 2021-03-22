@@ -43,7 +43,6 @@ fetch('https://quiztai.herokuapp.com/api/quiz')
                 progressBar.innerHTML = ""
                 disableAnswers();
             }
-            console.log(counter)
         }, 1000);
 
 
@@ -105,6 +104,10 @@ fetch('https://quiztai.herokuapp.com/api/quiz')
             points = 0;
             obj = {answers: []};
             localStorage.setItem("test", JSON.stringify(obj));
+            for(let i =0; i < 4; i++){
+                answers[i].classList.remove('correct')
+                answers[i].classList.remove('incorrect')
+            }
             let userScorePoint = document.querySelector('.score');
             userScorePoint.innerHTML = points;
             setQuestion(index);
