@@ -1,6 +1,7 @@
 body {
     width: 100%;
     font-size: 14px;
+    background-color: #ececec;
 }
 
 .container {
@@ -12,14 +13,78 @@ body {
 }
 
 .correct {
-    background-color: #289a27;
+    background-color: #7bb526;
 }
 
 .incorrect {
-    background-color: #c41a21;
+    background-color: #d62b1e;
 }
 
 .buttons {
     padding: 10px 10px 10px 0;
 }
 
+.btn{
+    width: 150px;
+}
+
+.table{
+    background-color: #faf9f9;
+}
+
+.scroll {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #faf9f9;
+    box-shadow: 5px 5px 0 #b2967d;
+    width: 50px;
+    height: 50px;
+    font-size: 32px;
+    text-align: center;
+}
+.scroll:hover {
+    color: #fff;
+    background-color: #b2967d;
+    transition: background-color .2s;
+}
+
+
+.hello {
+    width: 60%;
+    margin: 0 auto;
+    padding: 50px;
+    background-color: #faf9f9;
+    box-shadow: 5px 5px 0 #b2967d;
+}
+
+.btn-custom {
+    border: 1px solid #b2967d;
+    padding: 10px;
+    color: #473c32;
+}
+
+.btn-custom:hover {
+    color: #514539;
+    text-decoration: none;
+    background-color: #b2967d;
+    transition: background-color .2s;
+}
+
+.quiz {
+    width: 80%;
+    margin: 0 auto;
+    padding: 50px;
+    background-color: #faf9f9;
+    box-shadow: 5px 5px 0 #b2967d;
+}
+
+.progress-bar {
+    background-color: #b2967d;
+}
+
+@media (max-width: 800px) {
+    .hello {
+        width: 80%;
+    }
+}

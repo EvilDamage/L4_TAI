@@ -1,185 +1,12 @@
-// let preQuestions =
-//     [
-//         {
-//             "category": "Entertainment: Music",
-//             "type": "multiple",
-//             "difficulty": "medium",
-//             "question": "The song &quot;Twin Size Mattress&quot; was written by which band?",
-//             "correct_answer": "The Front Bottoms",
-//             "answers": ["The Front Bottoms", "Twenty One Pilots", "The Wonder Years", "The Smith Street Band"]
-//         },
-//         {
-//             "category": "Vehicles",
-//             "type": "multiple",
-//             "difficulty": "medium",
-//             "question": "Which Japanese company is the world&#039;s largest manufacturer of motorcycles?",
-//             "correct_answer": "Honda",
-//             "answers": ["Yamaha", "Suzuki", "Kawasaki", "Honda"]
-//         },
-//         {
-//             "category": "General Knowledge",
-//             "type": "multiple",
-//             "difficulty": "medium",
-//             "question": "Which of the following buildings is example of a structure primarily built in the Art Deco architectural style?",
-//             "correct_answer": "Niagara Mohawk Building",
-//             "answers": ["Niagara Mohawk Building", "Taipei 101", "One Detroit Center", "Westendstrasse 1"]
-//         },
-//         {
-//             "category": "Entertainment: Video Games",
-//             "type": "multiple",
-//             "difficulty": "easy",
-//             "question": "In most FPS video games such as Counter-Strike, shooting which part of the body does the highest damage?",
-//             "correct_answer": "Head",
-//             "answers": ["Arm", "Leg", "Chest", "Head"]
-//         },
-//         {
-//             "category": "General Knowledge",
-//             "type": "boolean",
-//             "difficulty": "medium",
-//             "question": "The term &quot;Spam&quot; came before the food product &quot;Spam&quot;.",
-//             "correct_answer": "False",
-//             "answers": ["True", "False"]
-//         },
-//         {
-//             "category": "Entertainment: Television",
-//             "type": "multiple",
-//             "difficulty": "easy",
-//             "question": "In the show Stranger Things, what is Eleven&#039;s favorite breakfast food?",
-//             "correct_answer": "Eggo Waffles",
-//             "answers": ["Toast", "Captain Crunch", "Bacon and Eggs", "Eggo Waffles"]
-//         },
-//         {
-//             "category": "Entertainment: Video Games",
-//             "type": "multiple",
-//             "difficulty": "medium",
-//             "question": "In the game Paper Mario for the Nintendo 64 the first partner you meet is a Goomba, what is its name?",
-//             "correct_answer": "Goombario",
-//             "answers": ["Goombella", "Goombarry", "Goomby", "Goombario"]
-//         },
-//         {
-//             "category": "History",
-//             "type": "multiple",
-//             "difficulty": "easy",
-//             "question": "When was Google founded?",
-//             "correct_answer": "September 4, 1998",
-//             "answers": ["October 9, 1997", "December 12, 1989", "Feburary 7th, 2000", "September 4, 1998"]
-//         },
-//         {
-//             "category": "Entertainment: Video Games",
-//             "type": "multiple",
-//             "difficulty": "medium",
-//             "question": "Which is not a playable character in the 2005 video game Killer7?",
-//             "correct_answer": "Frank Smith",
-//             "answers": ["Frank Smith", "Mask de Smith", "Dan Smith", "Coyote Smith"]
-//         },
-//         {
-//             "category": "Geography",
-//             "type": "boolean",
-//             "difficulty": "medium",
-//             "question": "The capital of the US State Ohio is the city of Chillicothe.",
-//             "correct_answer": "False",
-//             "answers": ["True", "False"]
-//         },
-//         {
-//             "category": "Entertainment: Video Games",
-//             "type": "multiple",
-//             "difficulty": "medium",
-//             "question": "Which company did Bethesda purchase the Fallout Series from?",
-//             "correct_answer": "Interplay Entertainment",
-//             "answers": ["Capcom", "Interplay Entertainment", "Blizzard Entertainment", "Nintendo"]
-//         },
-//         {
-//             "category": "Entertainment: Music",
-//             "type": "multiple",
-//             "difficulty": "medium",
-//             "question": "Which iconic album cover features the pulsar waves of CP 1919 placed in the center of the cover?",
-//             "correct_answer": "Unknown Pleasures",
-//             "answers": ["The Dark Side of the Moon", "Unknown Pleasures", "London Calling", "The Velvet Underground &amp; Nico"]
-//         },
-//         {
-//             "category": "Politics",
-//             "type": "boolean",
-//             "difficulty": "medium",
-//             "question": "During the 2016 United States presidential election, the State of California possessed the most electoral votes, having 55.",
-//             "correct_answer": "True",
-//             "answers": ["False", "True"]
-//         },
-//         {
-//             "category": "History",
-//             "type": "multiple",
-//             "difficulty": "easy",
-//             "question": "Who was the first prime minister of Canada?",
-//             "correct_answer": "John Macdonald",
-//             "answers": ["John Macdonald", "John Abbott", "Alexander Mackenzie", "Robert Borden"]
-//         },
-//         {
-//             "category": "Geography",
-//             "type": "multiple",
-//             "difficulty": "medium",
-//             "question": "The land mass of modern day Turkey is called what?",
-//             "correct_answer": "Anatolia",
-//             "answers": ["Anatolia", "Ismuth of Ottoma", "Ottoma", "Ismuth of Anatolia"]
-//         },
-//         {
-//             "category": "Sports",
-//             "type": "boolean",
-//             "difficulty": "easy",
-//             "question": "In association football, or soccer, a corner kick is when the game restarts after someone scores a goal.",
-//             "correct_answer": "False",
-//             "answers": ["True", "False"]
-//         },
-//         {
-//             "category": "Entertainment: Film",
-//             "type": "multiple",
-//             "difficulty": "medium",
-//             "question": "Who played the Cenobite called &quot;Pinhead&quot; in the original Hellraiser films?",
-//             "correct_answer": "Doug Bradley",
-//             "answers": ["Doug Bradley", "Doug Jones", "Doug Savant", "Doug Benson"]
-//         },
-//         {
-//             "category": "Geography",
-//             "type": "multiple",
-//             "difficulty": "medium",
-//             "question": "Which of these countries is the smallest by population?",
-//             "correct_answer": "Norway",
-//             "answers": ["Slovakia", "Norway", "Finland", "Hong Kong"]
-//         },
-//         {
-//             "category": "Science: Computers",
-//             "type": "multiple",
-//             "difficulty": "medium",
-//             "question": "Which internet company began life as an online bookstore called &#039;Cadabra&#039;?",
-//             "correct_answer": "Amazon",
-//             "answers": [
-//                 "eBay",
-//                 "Overstock",
-//                 "Shopify",
-//                 "Amazon"
-//             ]
-//         },
-//         {
-//             "category": "Science: Computers",
-//             "type": "multiple",
-//             "difficulty": "medium",
-//             "question": "Generally, which component of a computer draws the most power?",
-//             "correct_answer": "Video Card",
-//             "answers": [
-//                 "Hard Drive",
-//                 "Processor",
-//                 "Power Supply",
-//                 "Video Card"
-//             ]
-//         }];
-
-
 fetch('https://quiztai.herokuapp.com/api/quiz')
     .then(resp => resp.json())
     .then(resp => {
-        let preQuestions = resp;
+        let preQuestions = resp.sort(() => Math.random() - 0.5);
 
 
         let next = document.querySelector('.next');
         let previous = document.querySelector('.previous');
+        let progressBar = document.querySelector('.progress-bar');
 
         let question = document.querySelector('.question');
         let questionIndex = document.querySelector('.question-index');
@@ -187,9 +14,14 @@ fetch('https://quiztai.herokuapp.com/api/quiz')
 
         let list = document.querySelector('.list');
         let results = document.querySelector('.results');
+        let resultsHistory = document.querySelector('.results-history');
 
         let userScorePoint = document.querySelector('.userScorePoint');
         let average = document.querySelector('.average');
+
+        let button = document.querySelector('.scroll');
+        button.addEventListener('click', goToTop);
+
 
         let pointsElem = document.querySelector('.score');
         let restart = document.querySelector('.restart');
@@ -197,6 +29,22 @@ fetch('https://quiztai.herokuapp.com/api/quiz')
         let points = 0;
         let activeAnswers = true;
         let obj = {answers: []};
+
+        progressBar.style.width = "100%"
+        let counter = 14
+        setInterval(function () {
+            if (counter >= 0 && activeAnswers) {
+                progressBar.style.width = (counter / 15 * 100) + "%"
+                progressBar.innerHTML = (counter) + "s"
+                counter--;
+            }
+            if (counter < 0) {
+                obj.answers[index] = null
+                progressBar.innerHTML = ""
+                disableAnswers();
+            }
+            console.log(counter)
+        }, 1000);
 
 
         setQuestion(index)
@@ -215,6 +63,7 @@ fetch('https://quiztai.herokuapp.com/api/quiz')
                 } else {
                     obj.answers[index] = event.target.innerHTML
                     markInCorrect(event.target);
+
                 }
                 disableAnswers();
             }
@@ -267,6 +116,7 @@ fetch('https://quiztai.herokuapp.com/api/quiz')
             index++;
             if (index < preQuestions.length) {
                 localStorage.setItem("test", JSON.stringify(obj));
+                counter = 15
                 activateAnswers();
 
                 setQuestion(index)
@@ -279,9 +129,42 @@ fetch('https://quiztai.herokuapp.com/api/quiz')
             if (index === preQuestions.length) {
                 list.style.display = 'none';
                 results.style.display = 'block';
+                disableAnswers();
+
+                let returnCode = '';
+
+                preQuestions.map((item, index) =>{
+                    returnCode += "Question: <span class=\"question-index\">"+(index + 1) + " z " + preQuestions.length+"</span>" +
+                            "<h4 class=\"question\">"+preQuestions[index].question+"</h4>" +
+                            "Answers:"+
+                            "<ul class=\"list-group\">"
+
+                    for (let i = 0; i < 4; i++) {
+                        if (i < preQuestions[index].answers.length) {
+                            if(preQuestions[index].correct_answer === obj.answers[index]) {
+                                if(obj.answers[index] === preQuestions[index].answers[i]){
+                                    returnCode += "<li class=\"list-group-item correct\">" + preQuestions[index].answers[i] + "</li>"
+                                }else{
+                                    returnCode += "<li class=\"list-group-item\">" + preQuestions[index].answers[i] + "</li>"
+                                }
+                            }
+                            else{
+                                if(obj.answers[index] === preQuestions[index].answers[i]){
+                                    returnCode += "<li class=\"list-group-item incorrect\">" + preQuestions[index].answers[i] + "</li>"
+                                }else{
+                                    returnCode += "<li class=\"list-group-item\">" + preQuestions[index].answers[i] + "</li>"
+                                }
+                            }
+                        }
+                    }
+
+                    returnCode += "</ul><hr/>"
+                })
+
+                resultsHistory.innerHTML = returnCode
 
                 userScorePoint.innerHTML = points;
-                average.innerHTML = (points / preQuestions.length * 100) + '%'
+                average.innerHTML = (points / preQuestions.length * 100).toFixed(2) + '%'
 
             }
         });
@@ -291,6 +174,7 @@ fetch('https://quiztai.herokuapp.com/api/quiz')
             if (index > 0) {
                 let obj = JSON.parse(localStorage.getItem("test"));
                 index--;
+                counter = 0
                 disableAnswers();
                 setQuestion(index)
 
@@ -310,5 +194,10 @@ fetch('https://quiztai.herokuapp.com/api/quiz')
             }
 
         });
+
+        function goToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
 
     });
