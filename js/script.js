@@ -103,6 +103,8 @@ fetch('https://quiztai.herokuapp.com/api/quiz')
 
             index = 0;
             points = 0;
+            obj = {answers: []};
+            localStorage.setItem("test", JSON.stringify(obj));
             let userScorePoint = document.querySelector('.score');
             userScorePoint.innerHTML = points;
             setQuestion(index);
